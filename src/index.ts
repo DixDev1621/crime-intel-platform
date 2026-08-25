@@ -44,7 +44,6 @@ app.use(
     credentials: true,
   })
 );
-
 app.options(/.*/, cors());
 app.use(express.json({ limit: "2mb" }));
 app.use(morgan(process.env.NODE_ENV === "development" ? "dev" : "combined"));
@@ -78,7 +77,6 @@ app.use("/api/reports", reportsRouter);
 app.use("/api/audit", auditRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/meta", metaRouter);
-
 // --- 404 + error handling (must be last) ---
 app.use(notFoundHandler);
 app.use(errorHandler);
