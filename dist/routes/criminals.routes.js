@@ -9,7 +9,7 @@ const audit_middleware_1 = require("../middleware/audit.middleware");
 const error_middleware_1 = require("../middleware/error.middleware");
 exports.criminalsRouter = (0, express_1.Router)();
 exports.criminalsRouter.use(auth_middleware_1.requireAuth);
-// GET /api/criminals?search=&minRisk=&page=&pageSize=
+ // GET /api/criminals?search=&minRisk=&page=&pageSize=
 exports.criminalsRouter.get("/", async (req, res, next) => {
     try {
         const page = parseInt(req.query.page || "1", 10);
