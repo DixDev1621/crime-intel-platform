@@ -16,7 +16,6 @@ analyticsRouter.get("/by-crime-type", async (_req, res, next) => {
     next(err);
   }
 });
-
 // Crime counts grouped by district
 analyticsRouter.get("/by-district", async (_req, res, next) => {
   try {
