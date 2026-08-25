@@ -8,7 +8,6 @@ import { Prisma } from "@prisma/client";
 
 export const criminalsRouter = Router();
 criminalsRouter.use(requireAuth);
-
 // GET /api/criminals?search=&minRisk=&page=&pageSize=
 criminalsRouter.get("/", async (req, res, next) => {
   try {
