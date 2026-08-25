@@ -9,7 +9,6 @@ import { queryDatabase } from "../services/ai-query.service";
 
 export const aiRouter = Router();
 aiRouter.use(requireAuth);
-
 // List a user's chat sessions
 aiRouter.get("/sessions", async (req, res, next) => {
   try {
